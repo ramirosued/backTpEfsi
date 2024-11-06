@@ -128,7 +128,7 @@ export default class EventRepository {
                 e.id, e.name, e.description, e.id_event_category, 
                 e.id_event_location, e.start_date, e.duration_in_minutes, 
                 e.price, e.enabled_for_enrollment, e.max_assistance, 
-                e.id_creator_user,
+                e.id_creator_user, e.imagen,
                 el.id AS event_location_id, el.id_location, el.name AS location_name, 
                 el.full_address, el.max_capacity, el.latitude AS location_latitude, 
                 el.longitude AS location_longitude,
@@ -174,6 +174,7 @@ export default class EventRepository {
                 price: eventData.price,
                 enabled_for_enrollment: eventData.enabled_for_enrollment,
                 max_assistance: eventData.max_assistance,
+                imagen: eventData.imagen,
                 creator_user: {
                     id: eventData.creator_user_id,
                     first_name: eventData.creator_first_name,
